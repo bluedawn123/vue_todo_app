@@ -13,7 +13,7 @@ const addtodo = (e)=>{
 }
 const todos = reactive([
   {id:1,title:'웹 배우기',checked:false},
-  {id:2,title:'취직하기',checked:false}  
+  {id:2,title:'취직하기',checked:false}
 ])
 
 const toggleCheckbox = ({id, checked})=>{
@@ -31,18 +31,18 @@ const todoDelete = ({id})=>{
 </script>
 
 <template>
- <div id="app" class="container">
+ <div class="container">
   <h1>Vue Todo App</h1>
-  <!-- 
+  <!--
   입력 내용이 실시간 반영
   <BFormInput placeholder="할일을 입력하세요"  v-model="todoText"/>
-  <Todo :todo="todoText"/> 
+  <Todo :todo="todoText"/>
   -->
   <!-- 입력후 엔터시 내용이 추가 -->
   <BFormInput placeholder="할일을 입력하세요"  @keyup.enter="addtodo" v-model="todoText"/>
-  <Todo 
-    v-for="todo in todos" 
-    :key="todo.id" 
+  <Todo
+    v-for="todo in todos"
+    :key="todo.id"
     :todo="todo"
     @toggle-checkbox="toggleCheckbox"
     @todo-delete="todoDelete"
