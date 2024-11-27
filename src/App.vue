@@ -12,8 +12,9 @@ const addtodo = (e)=>{
   todoText.value = '';
 }
 const todos = reactive([
-  {id:1,title:'웹 배우기',checked:false},
-  {id:2,title:'취직하기',checked:false}
+  {id:1,title:'이번 주 할일',checked:false},
+  {id:2,title:'김예진 괴롭히기 ㅎㅎ',checked:false},
+  {id:3,title:'엄청 괴롭히기 ㅎㅎ',checked:false}
 ])
 
 const toggleCheckbox = ({id, checked})=>{
